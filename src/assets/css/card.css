@@ -1,0 +1,72 @@
+/* 카드 영역 */
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+    background: #f5f5f5;
+}
+
+.card__body {
+    padding: 24px;
+}
+
+.card__body .tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    /* 1줄 효과 */
+    white-space: nowrap;
+    /* 1줄 효과 */
+    text-overflow: ellipsis;
+    /* 1줄 효과 */
+    padding-right: 20px;
+    /* 글자가 짤리는 것 방지 */
+}
+
+.card__body .desc {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.card__body .btn:hover {
+    text-decoration: underline;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 960px) {
+    .card__inner {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 49%;
+    }
+    .card:last-child{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+    .card:first-child{
+        margin-bottom: 20px;
+    }
+    .card__body {
+        padding: 20px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+    }
+}
