@@ -5,75 +5,77 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-function Slider() {
+function Slider(props) {
   return (
-    <div className="slider__inner">
-      <Swiper
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        navigation={true}
-        modules={[Autoplay, Navigation, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div class="desc">
-            <span>LIBRARY</span>
-            <h3>SPACE</h3>
-            <p>
-              For thousands of years, people have looked up at the night sky
-              with questions. <br />
-              As technologies have advanced so to has our ability to investigate
-              those questions.
-            </p>
-            <div class="btn">
-              <a href="/">Learn more</a>
-              <a href="/" class="black">
-                View resource
-              </a>
+    <section id="sliderType" className={`slider__wrap ${props.fonts}`}>
+      <div className="slider__inner">
+        <Swiper
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Autoplay, Navigation, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div class="desc">
+              <span>LIBRARY</span>
+              <h3>SPACE</h3>
+              <p>
+                For thousands of years, people have looked up at the night sky
+                with questions. <br />
+                As technologies have advanced so to has our ability to
+                investigate those questions.
+              </p>
+              <div class="btn">
+                <a href="/">Learn more</a>
+                <a href="/" class="black">
+                  View resource
+                </a>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="desc">
-            <span>LIBRARY</span>
-            <h3>SPACE</h3>
-            <p>
-              For thousands of years, people have looked up at the night sky
-              with questions. <br />
-              As technologies have advanced so to has our ability to investigate
-              those questions.
-            </p>
-            <div class="btn">
-              <a href="/">Learn more</a>
-              <a href="/" class="black">
-                View resource
-              </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div class="desc">
+              <span>LIBRARY</span>
+              <h3>SPACE</h3>
+              <p>
+                For thousands of years, people have looked up at the night sky
+                with questions. <br />
+                As technologies have advanced so to has our ability to
+                investigate those questions.
+              </p>
+              <div class="btn">
+                <a href="/">Learn more</a>
+                <a href="/" class="black">
+                  View resource
+                </a>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="desc">
-            <span>LIBRARY</span>
-            <h3>SPACE</h3>
-            <p>
-              For thousands of years, people have looked up at the night sky
-              with questions. <br />
-              As technologies have advanced so to has our ability to investigate
-              those questions.
-            </p>
-            <div class="btn">
-              <a href="/">Learn more</a>
-              <a href="/" class="black">
-                View resource
-              </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div class="desc">
+              <span>LIBRARY</span>
+              <h3>SPACE</h3>
+              <p>
+                For thousands of years, people have looked up at the night sky
+                with questions. <br />
+                As technologies have advanced so to has our ability to
+                investigate those questions.
+              </p>
+              <div class="btn">
+                <a href="/">Learn more</a>
+                <a href="/" class="black">
+                  View resource
+                </a>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
   );
 }
 
