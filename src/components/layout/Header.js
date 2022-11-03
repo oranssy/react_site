@@ -6,28 +6,28 @@ function Header(props) {
       <div className="header__inner">
         <div className="header__logo">
           <a href="/">
-            cosmos <em>info</em>
+            CREATON
           </a>
         </div>
         <div className="header__menu">
           <ul>
             <li>
-              <a href="/sliderType">Library</a>
+              <a href="/sliderType">About</a>
             </li>
             <li>
-              <a href="/imageType">Observation</a>
+              <a href="/imageType">Studios</a>
             </li>
             <li>
-              <a href="/imgTextType">Exploration</a>
+              <a href="/imgTextType">Games</a>
             </li>
             <li>
-              <a href="/cardType">Solar Power</a>
+              <a href="/cardType">More Experience</a>
             </li>
             <li>
-              <a href="/bannerType">Black Hole</a>
+              <a href="/bannerType">Careers</a>
             </li>
             <li>
-              <a href="/textType">Planets</a>
+              <a href="/textType">News</a>
             </li>
           </ul>
         </div>

@@ -1,47 +1,55 @@
 import React from "react";
 
+const imageTextCont = {
+  blindName : "Careers",
+  subTitle : "STAY CREATIVE",
+  title : "Careers",
+  desc : "게임 제작을 이끌고 성과를 만들어 내는 것은 결국 '사람'에서 시작됩니다.",
+  imgClass1 : "img1",
+  imgClass2 : "img2",
+  aTitle1 : "PEOPLE & LIFE",
+  aTitle2 : "CREATON RECRUIT",
+};
+
+const linkTitle = [
+  { tit : "How We Work" }, 
+  { tit : "Project Windless" }, 
+  { tit : "Project XTRM" }, 
+  { tit : "Art Department" },
+  { tit : "PUBG STUDIOS" },
+  { tit : "Special Project 2" }
+];
+
+const LinkText = ({ tit }) => {
+  return  <li>
+            <a href="/">{ tit }</a>
+          </li>
+}
+
 function ImageText({ attr }) {
   return (
     <section
       id="imgTextType"
       className={`imgText__wrap ${attr[0]} ${attr[1]} ${attr[2]}`}
     >
-      <h2 className="blind">이미지텍스트 타입</h2>
+      <h2 className="blind">{imageTextCont.blindName}</h2>
       <div className={`imgText__inner ${attr[3]}`}>
         <div className="imgText__txt">
-          <span>Space Probes</span>
-          <h3>Exploration</h3>
-          <p>
-            Human space exploration helps to address fundamental questions about
-            our place in the Universe and the history of our solar system.
-          </p>
+          <span>{imageTextCont.subTitle}</span>
+          <h3>{imageTextCont.title}</h3>
+          <p>{imageTextCont.desc}</p>
           <ul>
-            <li>
-              <a href="/">Jan 7, 1610 CE: Galileo Discovers Jupiter’s Moons</a>
-            </li>
-            <li>
-              <a href="/">Apollo 11 Astronauts on Moon</a>
-            </li>
-            <li>
-              <a href="/">Oct 4, 1957 CE: USSR Launches Sputnik</a>
-            </li>
-            <li>
-              <a href="/">Women of NASA</a>
-            </li>
-            <li>
-              <a href="/">Exploring Mars</a>
-            </li>
-            <li>
-              <a href="/">scale of the universe 2</a>
-            </li>
+            {linkTitle.map((info, index) => (
+              <LinkText key={index} tit={info.tit}/>
+            ))}
           </ul>
         </div>
-        <div className="imgText__img img1">
-          <a href="/">Star Search</a>
+        <div className={`imgText__img ${imageTextCont.imgClass1}`}>
+          <a href="/">{imageTextCont.aTitle1}</a>
         </div>
-        <div className="imgText__img img2">
+        <div className={`imgText__img ${imageTextCont.imgClass2}`}>
           <a href="/" className="blue">
-            Space Gym
+            {imageTextCont.aTitle2}
           </a>
         </div>
       </div>
